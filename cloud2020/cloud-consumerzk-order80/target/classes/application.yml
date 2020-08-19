@@ -1,0 +1,8 @@
+server:
+  port: 80
+spring:
+  application:
+    name: cloud-comsumerzk-order
+  cloud:
+    zookeeper:
+      connect-string: 172.16.8.199:2181   #zookeeper所在的服务器的地址，及 zookeeper使用的端口2181
