@@ -3,6 +3,7 @@ package com.atguigu.springcloud.controller;
 import com.atguigu.springcloud.entities.CommonResult;
 import com.atguigu.springcloud.entities.Payment;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,5 +37,22 @@ public class OrderController {
     @GetMapping("/consumer/payment/get/{id}")
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id){
         return restTemplate.getForObject(PAYMENT_URL + "/payment/get/" + id, CommonResult.class);
+    }
+
+    @GetMapping(value = "/consumer/payment/getForEntity/{id}")
+    public CommonResult<Payment> getPayment2(@PathVariable("id") Long id) {
+        /**
+         *  restTemplate两个方法的区别 如果需要更详细的信息，用 getForEntity，如果只需要json传，用 getForObject,推荐使用 getForObject
+         *  restTemplate两个方法的区别 如果需要更详细的信息，用 postForEntity，如果只需要json传，用 postForObject,推荐使用 postForObject
+         */
+
+        ResponseEntity<CommonResult> entity = restTemplate.getForEntity(PAYMENT_URL + "/payment/get/" + id, CommonResult.class);
+        if (entity.getStatusCode().is2xxSuccessful()) {
+            log.info(entity.getHeaders()+"\t"+entity.getStatusCode()+"\t"+entity.getStatusCodeValue());
+            return entity.getBody();
+        } else {
+            return new CommonResult<>(444, "操作失败");
+        }
+
     }
 }

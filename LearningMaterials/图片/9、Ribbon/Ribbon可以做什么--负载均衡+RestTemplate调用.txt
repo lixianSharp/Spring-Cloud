@@ -1,0 +1,1 @@
+Ribbon是结合RestTemplate一起使用的，作用是 :负载均衡+RestTemplate调用

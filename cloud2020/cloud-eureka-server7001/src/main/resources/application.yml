@@ -1,5 +1,6 @@
 server:
   port: 7001
+
 eureka:
   instance:
     hostname: eureka7001.com #eureka服务端的实例名字
@@ -7,8 +8,8 @@ eureka:
     register-with-eureka: false #false表示不向注册中心注册自己
     fetch-registry: false #false表示自己就是注册中心，职责是维护服务实例，并不需要去检索服务
     service-url:
-#      defaultZone: http://eureka7002.com:7002/eureka/  # 集群指向其他eureka   表示向eureka7002进行注册  #设置与eureka server交互的地址查询服务和注册服务都需. ${eureka.instance.hostname} 表示上面的localhost ，${server.port}表示7上面的001端口
-      defaultZone: http://eureka7001.com:7001/eureka/  #单机就是自己，即单机版就是 指向自己。
+      defaultZone: http://eureka7002.com:7002/eureka/  # 集群指向其他eureka   表示向eureka7002进行注册  #设置与eureka server交互的地址查询服务和注册服务都需. ${eureka.instance.hostname} 表示上面的localhost ，${server.port}表示7上面的001端口
+#      defaultZone: http://eureka7001.com:7001/eureka/  #单机就是自己，即单机版就是 指向自己。
   server:
-    enable-self-preservation: false  #关闭自我保护机制，保证不可用服务被及时踢除
+    enable-self-preservation: false  #关闭eureka自我保护机制，保证不可用服务被及时踢除
     eviction-interval-timer-in-ms: 2000  #2000毫秒

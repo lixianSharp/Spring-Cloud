@@ -1,4 +1,4 @@
-准备看P36_Ribbon入门介绍
+准备看 P42_Ribbon之手写轮询算法
 
 微服务模块
 1、建module
