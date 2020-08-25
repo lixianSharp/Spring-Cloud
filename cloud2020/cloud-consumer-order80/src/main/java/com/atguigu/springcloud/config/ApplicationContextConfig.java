@@ -15,7 +15,7 @@ public class ApplicationContextConfig {
 
     //RestTemplate的功能就类似于 HttpClient,用于发送Rest风格的http请求。
     @Bean
-    @LoadBalanced //使用 @LoadBalance 赋予RestTemplate负载均衡能力
+//    @LoadBalanced //使用 @LoadBalance 赋予RestTemplate负载均衡能力
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
