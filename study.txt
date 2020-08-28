@@ -1,4 +1,4 @@
-准备看 P43_OpenFeign是什么
+准备看 P49——Hystrix的服务降级熔断限流概念初讲
 
 微服务模块
 1、建module
@@ -6,3 +6,18 @@
 3、写YML
 4、主启动
 5、业务类
+
+NIO、BIO
+Volition
+Hibernate二级缓存
+List如何删除数据
+如何比较两个对象
+序列化的作用是什么
+	跨平台传输数据.....
+抽象类和普通类的区别是什么
+说一下tcp的socket
+支付的时候如何防止重复交易？比如后台做了什么
+java中的集合(单列、key-value)，你在项目中用了什么Map集合，hashMap是线程安全的吗？java8中新增了一个线程安全的map，是啥？用过LinkedHashMap吗？
+throws和throw的区别？
+在try-catch语句中，在catch中有return，那么finally中的语句还会执行吗？如果还会执行，在return之前还是return之后执行？
+http中的post和get的区别？

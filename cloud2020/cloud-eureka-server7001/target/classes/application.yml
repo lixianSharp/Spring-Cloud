@@ -10,6 +10,6 @@ eureka:
     service-url:
       defaultZone: http://eureka7002.com:7002/eureka/  # 集群指向其他eureka   表示向eureka7002进行注册  #设置与eureka server交互的地址查询服务和注册服务都需. ${eureka.instance.hostname} 表示上面的localhost ，${server.port}表示7上面的001端口
 #      defaultZone: http://eureka7001.com:7001/eureka/  #单机就是自己，即单机版就是 指向自己。
-  server:
-    enable-self-preservation: false  #关闭eureka自我保护机制，保证不可用服务被及时踢除
-    eviction-interval-timer-in-ms: 2000  #2000毫秒
+#  server:
+#    enable-self-preservation: false  #关闭eureka自我保护机制，保证不可用服务被及时踢除
+#    eviction-interval-timer-in-ms: 2000  #2000毫秒

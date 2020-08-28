@@ -36,6 +36,7 @@ public class OrderController {
     @PostMapping(value = "/consumer/payment/create")
     public CommonResult<Payment> create(Payment payment) {
         log.info("准备插入数据..");
+        //因为这里 PAYMENT_URL 代表的是在EurekaServer中的服务CLOUD-PAYMENT-SERVICE，所以要将 RestTemplate中的 @LoadBalanced 注释放开才可以使用。因为这种方式是使用负载均衡了，所以必须要用 @LoadBalanced这个注解。
         return restTemplate.postForObject(PAYMENT_URL + "/payment/create", payment, CommonResult.class);
     }
 
@@ -71,6 +72,7 @@ public class OrderController {
 
     @GetMapping(value = "/consumer/payment/lb")
     public String getPaymentLB() {
+        //因为这里是用的Ribbon自定义的轮询算法，所以要将RestTemplate中的 @LoadBalanced注解去掉，不然会和自定义的轮询算法冲突。
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
         if (instances == null || instances.size() <= 0) {
             return null;
