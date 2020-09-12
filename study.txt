@@ -1,4 +1,4 @@
-准备看 P49——Hystrix的服务降级熔断限流概念初讲
+准备看 54_Hystrix之服务降级支付侧fallback
 
 微服务模块
 1、建module
@@ -21,3 +21,6 @@ java中的集合(单列、key-value)，你在项目中用了什么Map集合，ha
 throws和throw的区别？
 在try-catch语句中，在catch中有return，那么finally中的语句还会执行吗？如果还会执行，在return之前还是return之后执行？
 http中的post和get的区别？
+
+
+A∪B∪C=A+B+C-A∩B-A∩C+A∩B∩C
