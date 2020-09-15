@@ -12,6 +12,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <dependencies>
+        <!--包含了sleuth+zipkin-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
         <!--将payment8001入住进eurekaServer-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
