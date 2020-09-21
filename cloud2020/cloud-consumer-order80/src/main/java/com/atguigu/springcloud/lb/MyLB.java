@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * @author lxy
  * @Date 2020/8/25
- * @Descript
+ * @Descript： 实现本地负载均衡器，进而进行负载均衡
  **/
 @Component //表示这是一个组件，可以被spring容器扫描到
 public class MyLB implements LoadBalancer {
