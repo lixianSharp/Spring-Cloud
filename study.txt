@@ -1,4 +1,4 @@
-准备看 73_GateWay的Filter
+准备看 78_Bus消息总线是什么
 面试题 02
 
 微服务模块
@@ -9,7 +9,7 @@
 5、业务类
 
 NIO、BIO
-Volition
+Volatile
 Hibernate二级缓存
 List如何删除数据
 如何比较两个对象
@@ -24,4 +24,6 @@ throws和throw的区别？
 http中的post和get的区别？
 
 
-A∪B∪C=A+B+C-A∩B-A∩C+A∩B∩C
+
+
+
