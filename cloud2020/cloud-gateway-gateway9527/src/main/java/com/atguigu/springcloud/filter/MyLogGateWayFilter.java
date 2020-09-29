@@ -33,6 +33,7 @@ public class MyLogGateWayFilter implements GlobalFilter, Ordered {
         return chain.filter(exchange);
     }
 
+    
     @Override
     public int getOrder() {
         return 0; //0代表级别最高, 范围的话，可以看 Ordered的源码
